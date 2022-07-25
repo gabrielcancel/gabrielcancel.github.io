@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./article-16_files/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./article-16_files/tailwind.css" />
+  </head>
+  <body>
+    <div class="nav-bar">
+      <a href="/">
+        <h1>HOME</h1>
+      </a>
+
+      <a href="/#first-article">
+        <h1>ARTICLES</h1>
+      </a>
+
+      <a href="contact.html">
+        <h1>CONTACT ME</h1>
+      </a>
+    </div>
+
+    <!-- <img src="/static/images/josh-withers.jpeg" alt="logo"> -->
+
+    <!-- <img src="/static/public/image/ethan-hu-iy6UZlfqSbo-unsplash_MnvCOoF.jpeg" alt="test"> -->
+
+    <article class="tw-mx-auto tw-mt-12 tw-prose tw-prose-slate tw-lg:prose-xl tw-pb-10">
+      <h1>Contenue Pedagogique : Git Tutorial</h1>
+      <p>
+        Cet article fait suite a l'article sur la rédaction de contenu pédagogique. Il est adressé aux premières années
+        en informatique dans les premières semaines de cours intenssifs, les piscines Golang. La plupart des
+        documentations liées à l’informatique étant en anglais, le tutoriel Git est donc en anglais.
+      </p>
+      <h1>Welcome to git tutorial</h1>
+      <h2>Setup</h2>
+      <p>Download <a href="https://git-scm.com/">installer</a> for Windows and Mac</p>
+      <h3>Windows Setup</h3>
+      <p>Specific option during installation :</p>
+      <ul>
+        <li>Use Git and optional Unix tools form the Windows Command Prompt</li>
+        <li>Other parameter to set leave default</li>
+      </ul>
+
+      <h3>Linux Setup</h3>
+      <p>apt-get install git</p>
+
+      <h3>Mac Setup</h3>
+      <ul>
+        <li>Open the dmg file</li>
+        <li>Install dpkg file</li>
+      </ul>
+      <h2>Check the installation</h2>
+      <p>Open a terminal and write</p>
+      <code>git help</code>
+      <p>or</p>
+      <code>git --help</code>
+      <h2>Using git</h2>
+      <h3>Init git</h3>
+      <p>Create folder with</p>
+      <code>mkdir folder_name</code>
+      <p>Go to this folder</p>
+      <code>cd folder_name</code>
+      <p>And init git on this folder</p>
+      <code>git init</code>
+
+      <h3>Start with git</h3>
+      <p>Create a file</p>
+      <code>touch README.md </code>
+      <p>View file status</p>
+      <code>git status</code>
+      <p>To track the file with git, use</p>
+      <code>git add README.md</code>
+      <p>If you watch again the file status, your file is tracked. You can now commit your modification</p>
+      <code>git commit -m "your comment" </code>
+
+      <h3>Tips</h3>
+      <p>To add a file and commit it in the same time, use</p>
+      <code>git commit -a -m “your comment”</code>
+      <p>To track all file, use</p>
+      <code>git add --all</code>
+      <p>Ignore file In some cases you want to ignore files. To do this, create a .gitignore</p>
+      <code>touch .gitignore</code>
+      <p>Edited this file by putting the filenames to ignore And commit this file</p>
+
+      <h3>Watch your commit history</h3>
+      <code>git log</code>
+      <p>You can specify some parameters<br />For example, if you want the last two commit, use</p>
+      <code>git log -n 2</code>
+      <p>The list of commits is very complete, to make it more succinct, use</p>
+      <code>git log --oneline</code>
+      <p>If you want specify a file, use</p>
+      <code>git log -p filename</code>
+
+      <h3>Watch differences</h3>
+      <p>If you want look at the differences between your actual file and file status when you commit</p>
+      <code>git diff</code>
+
+      <h3>To go back on a commit</h3>
+      <code>git checkout commitID filename</code>
+      <p>
+        This gives us back the changes that were to the file in question at the time of the specified commit. The file
+        is then modified and we can commit it.
+      </p>
+
+      <h3>To return to the current state</h3>
+      <code>git checkout master filename</code>
+
+      <h3>Revert</h3>
+      <p>If we want to undo what you did at a particular commit, use</p>
+      <code>git revert commitID</code>
+
+      <h2>Branch</h2>
+      <h3>Create a new branch</h3>
+      <code>git branch branchname</code>
+      <h3>To change branches</h3>
+      <code>git checkout branchname</code>
+
+      <h3>Merge branch</h3>
+      <p>To merge branches, go to the destination branch For example go to master branch</p>
+      <code>git checkout master</code>
+      <p>And now merge yout branch</p>
+      <code>git merge branchnametomerge </code>
+      <p>You can now delete the branch that has just been merged</p>
+      <code>git branch -d branchname</code>
+
+      <h3>Link our git to a GitHub repository</h3>
+      <p>Perform all the initialization steps and create the repo on GitHub, then remote</p>
+      <code>git remote add origin repoaddress</code>
+      <p>To send all local files to the repository</p>
+      <code> git push origin —all</code>
+      <br /><br />
+      <h1>Congratulations you have just started using versioning</h1>
+      <br /><br />
+    </article>
+
+    <div id="forest-ext-shadow-host"></div>
+  </body>
+</html>
